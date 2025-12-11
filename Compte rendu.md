@@ -1,8 +1,10 @@
+## HAMDOUNE Oumaima 
+## Apogée : 24010431
+
 # PROJET : ASSISTANT IA POUR LE DIAGNOSTIC MÉDICAL - ANALYSE CROISÉE DES PERFORMANCES**
 
 ##TITRE DES PROJETS
-## 1. DIAGNOSTIC DU CANCER DU SEIN PAR MACHINE LEARNING
-- Classification binaire sur données tabulaires
+## 1. DIAGNOSTIC DU CANCER DU SEIN PAR MACHINE LEARNING- Classification binaire sur données tabulaires
 ## 2. DÉTECTION DE TUMEURS CÉRÉBRALES PAR DEEP LEARNING - Classification d'images IRM par CNN
 
 ##  DESCRIPTIF GLOBAL DES PROJETS
@@ -394,10 +396,10 @@ Test: 38 (15.0%)
 
 | Métrique | Projet 1 | Projet 2 | Standard Médical | Évaluation |
 |----------|----------|----------|------------------|------------|
-| **Recall Malin/Yes** | 95% | 96% | >90% requis | ✅ **Excellent** |
-| **Faux Négatifs** | 2/42 (4.8%) | 1/23 (4.3%) | <10% cible | ✅ **Très bon** |
-| **Précision** | 93-97% | 96-100% | >85% souhaité | ✅ **Excellent** |
-| **F1-Score** | 95.45% | 98% | >90% | ✅ **Excellent** |
+| **Recall Malin/Yes** | 95% | 96% | >90% requis | **Excellent** |
+| **Faux Négatifs** | 2/42 (4.8%) | 1/23 (4.3%) | <10% cible | **Très bon** |
+| **Précision** | 93-97% | 96-100% | >85% souhaité | **Excellent** |
+| **F1-Score** | 95.45% | 98% | >90% | **Excellent** |
 
 ---
 
@@ -423,11 +425,11 @@ Test: 38 (15.0%)
 ##  **INNOVATIONS MÉTHODOLOGIQUES**
 
 ### **Bonnes Pratiques Implémentées**
-✅ **Priorisation Recall** conforme à l'éthique médicale  
-✅ **Gestion data leakage** avec avertissements pédagogiques  
-✅ **Augmentation données** pour CNN (amélioration généralisation)  
-✅ **Early stopping** pour éviter overfitting  
-✅ **Triple split** (train/val/test) pour validation rigoureuse  
+**Priorisation Recall** conforme à l'éthique médicale  
+**Gestion data leakage** avec avertissements pédagogiques  
+**Augmentation données** pour CNN (amélioration généralisation)  
+ **Early stopping** pour éviter overfitting  
+ **Triple split** (train/val/test) pour validation rigoureuse  
 
 ### **Features Techniques Avancées**
 - **Batch Normalization** : Stabilisation entraînement CNN
