@@ -3,8 +3,8 @@
 <img width="738" height="689" alt="image" src="https://github.com/user-attachments/assets/5ccc47f5-b199-4f9b-8343-5ae7b0fc93ec" />
 <img width="629" height="635" alt="image" src="https://github.com/user-attachments/assets/d5336512-8ad3-46d0-ac97-6d1ef7df733d" />
 
+## Développement d'un système de classification automatique d'images IRM pour la détection de tumeurs cérébrales par apprentissage profond
 
-Détection des Tumeurs Cérébrales à partir d’Images IRM**
 
 # **1. Contexte et Objectif du Projet**
 
@@ -21,7 +21,9 @@ L’objectif de ce projet est donc de construire un modèle capable de **classer
 * **No Brain Tumor** → absence de tumeur.
 
 ---
-
+## Thématique à résoudre
+# Problématique médicale :
+La détection manuelle des tumeurs cérébrales sur les images IRM présente plusieurs limitations : variabilité inter-opérateur, fatigue des radiologues, temps d'analyse conséquent, et risque d'erreur humaine dans l'interprétation des images complexes
 # **2. Présentation du Dataset**
 
 Le dataset utilisé contient des **images IRM du cerveau**, réparties en deux dossiers :
