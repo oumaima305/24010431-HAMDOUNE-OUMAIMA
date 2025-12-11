@@ -1,6 +1,9 @@
 ## HAMDOUNE Oumaima 
 ## Apogée : 24010431
-
+<img src="
+<img width="738" height="689" alt="image" src="https://github.com/user-attachments/assets/5ccc47f5-b199-4f9b-8343-5ae7b0fc93ec" />
+" style="height:464px;margin-right:432px"/> 
+<img src="<img width="629" height="635" alt="image" src="https://github.com/user-attachments/assets/d5336512-8ad3-46d0-ac97-6d1ef7df733d" />" style="height:464px;margin-right:432px"/> 
 # PROJET : ASSISTANT IA POUR LE DIAGNOSTIC MÉDICAL - ANALYSE CROISÉE DES PERFORMANCES**
 
 ##TITRE DES PROJETS
