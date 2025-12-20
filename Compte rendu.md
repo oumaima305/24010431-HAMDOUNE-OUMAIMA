@@ -3,168 +3,202 @@
 <img width="738" height="689" alt="image" src="https://github.com/user-attachments/assets/5ccc47f5-b199-4f9b-8343-5ae7b0fc93ec" />
 <img width="629" height="635" alt="image" src="https://github.com/user-attachments/assets/d5336512-8ad3-46d0-ac97-6d1ef7df733d" />
 
-## Développement d'un système de classification automatique d'images IRM pour la détection de tumeurs cérébrales par apprentissage profond
+## Détection automatique des tumeurs cérébrales par apprentissage profond
+## ## Développement d'un système de classification automatique d'images IRM pour la détection de tumeurs cérébrales par apprentissage profond
+## 1. Contexte général et introduction
 
+La détection des tumeurs cérébrales constitue une étape cruciale dans le diagnostic médical. Elle repose traditionnellement sur l’analyse manuelle des images IRM par des radiologues. Bien que cette méthode soit fiable, elle présente plusieurs limites liées à l’intervention humaine. Avec l’évolution du Machine Learning et plus particulièrement du Deep Learning, il devient possible de développer des systèmes intelligents capables d’analyser automatiquement ces images afin d’assister les professionnels de santé.
 
-# **1. Contexte et Objectif du Projet**
+Ce travail s’inscrit dans cette perspective et vise à exploiter les réseaux de neurones convolutifs (CNN) pour la classification automatique d’images IRM du cerveau.
 
-Le diagnostic des tumeurs cérébrales repose traditionnellement sur l’analyse manuelle d’images IRM par des radiologues. Cette méthode, bien qu’efficace, peut être longue, complexe et sujette à l’erreur humaine.
-Avec l’essor du Machine Learning et du Deep Learning, il devient possible d’automatiser en partie ce processus afin de :
+## 2. Problématique
 
-* réduire le temps d’analyse,
-* assister les professionnels de santé dans leurs décisions,
-* améliorer la détection précoce des tumeurs.
+La détection manuelle des tumeurs cérébrales sur les images IRM présente plusieurs limitations majeures :
 
-L’objectif de ce projet est donc de construire un modèle capable de **classer automatiquement des images IRM** en deux catégories :
+Variabilité inter-opérateur dans l’interprétation des images.
 
-* **Brain Tumor** → présence de tumeur,
-* **No Brain Tumor** → absence de tumeur.
+Fatigue des radiologues due à la charge de travail élevée.
 
----
-## Thématique à résoudre
-# Problématique médicale :
-La détection manuelle des tumeurs cérébrales sur les images IRM présente plusieurs limitations : variabilité inter-opérateur, fatigue des radiologues, temps d'analyse conséquent, et risque d'erreur humaine dans l'interprétation des images complexes
-# **2. Présentation du Dataset**
+Temps d’analyse conséquent pour chaque examen.
 
-Le dataset utilisé contient des **images IRM du cerveau**, réparties en deux dossiers :
+Risque d’erreur humaine face à la complexité des images IRM.
 
-* **yes** : images présentant une tumeur,
-* **no** : images normales sans tumeur.
+Ces contraintes justifient la mise en place d’un système automatique, capable de fournir une aide fiable, rapide et reproductible au diagnostic médical.
 
-Caractéristiques principales :
+## 3. Objectifs du projet
 
-| Élément                  | Description                                                 |
-| ------------------------ | ----------------------------------------------------------- |
-| Type de données          | Images IRM (format .jpg / .png)                             |
-| Nombre de classes        | 2                                                           |
-| Niveau de complexité     | Modéré (variation des formes, contrastes, qualités d’image) |
-| Prétraitement nécessaire | Redimensionnement, normalisation                            |
+L’objectif principal de ce projet est le développement d’un système de classification automatique d’images IRM pour la détection de tumeurs cérébrales par apprentissage profond.
 
-Ce dataset est couramment utilisé dans des projets de vision artificielle médicale.
+## Objectifs spécifiques :
 
----
+Automatiser l’analyse des images IRM.
 
-# **3. Prétraitement et Préparation des Données**
+Classer les images en deux catégories : présence ou absence de tumeur.
 
-Le prétraitement comprend :
+Réduire le temps de diagnostic.
 
-### **1. Chargement des images**
+Améliorer la précision et la cohérence des résultats.
 
-Les images sont lues depuis leurs dossiers respectifs (yes / no).
+Fournir un outil d’aide à la décision pour les radiologues.
 
-### **2. Redimensionnement**
+## 4. Présentation et source de la base de données
 
-Chaque image est redimensionnée en **128 × 128 pixels**, afin de :
+Le dataset utilisé est composé d’images IRM du cerveau, organisées en deux classes :
 
-* standardiser la taille,
-* faciliter l’apprentissage du CNN.
+Yes (Brain Tumor) : images contenant une tumeur.
 
-### **3. Conversion en tableau numpy**
+No (No Brain Tumor) : images saines.
 
-Les images sont transformées en matrices numériques exploitées par le réseau.
+## Caractéristiques du dataset :
+Élément	Description
+Type de données	Images IRM (.jpg / .png)
+Nombre de classes	2
+Nature	Données supervisées
+Complexité	Variations de formes, contrastes et qualité
 
-### **4. Normalisation**
+Les données proviennent d’une plateforme scientifique ouverte (telle que Kaggle), où elles sont mises à disposition par des chercheurs et institutions médicales à des fins pédagogiques et de recherche, après anonymisation.
 
-Les valeurs des pixels sont divisées par 255 pour obtenir des valeurs entre 0 et 1, ce qui accélère l’apprentissage.
+## 5. Méthodologie de travail
 
-### **5. Encodage des classes**
+La méthodologie suivie respecte le cycle de vie classique d’un projet de Machine Learning :
 
-* 1 → tumeur
-* 0 → pas de tumeur
+Collecte des données : chargement des images IRM.
 
----
+## Prétraitement :
 
-# **4. Séparation des Données**
+Redimensionnement des images en 128×128 pixels.
 
-Les données sont divisées en :
+Normalisation des valeurs des pixels entre 0 et 1.
 
-* **80 % pour l’entraînement (train set)**
-* **20 % pour le test (test set)**
+Conversion des images en tableaux NumPy.
 
-Cette séparation permet :
+Encodage des classes (1 : tumeur, 0 : absence de tumeur).
 
-* d’entraîner correctement le modèle,
-* d’évaluer ses performances sur des images jamais vues.
+## Séparation des données :
 
----
+80 % pour l’entraînement.
 
-# **5. Modèle Utilisé : CNN (Convolutional Neural Network)**
+20 % pour le test.
 
-Le modèle choisi est un **CNN (réseau neuronal convolutionnel)**, l’algorithme le plus adapté pour analyser les images.
+## Modélisation : conception d’un réseau neuronal convolutionnel (CNN).
 
-### **Architecture générale :**
+## Entraînement : optimisation des paramètres du modèle.
 
-* **Convolution layers** : extraction des formes, textures, contours
-* **MaxPooling layers** : réduction de la dimension
-* **Flatten** : transformation de l’image en vecteur
-* **Dense layers** : classification finale
-* **Activation sigmoid** : sortie binaire (0 ou 1)
+## Évaluation : analyse des performances à l’aide de métriques et de graphes.
 
-### **Pourquoi un CNN ?**
+## 6. Modèle utilisé : Réseau de neurones convolutif (CNN)
 
-| Raison            | Explication                                         |
-| ----------------- | --------------------------------------------------- |
-| Adapté aux images | Il détecte automatiquement les structures visuelles |
-| Robuste           | Insensible au bruit et aux variations d’éclairage   |
-| Rapide            | Performant même avec peu d'images                   |
-| Interprétable     | Filtrage visuel progressif                          |
+Le modèle choisi est un CNN, particulièrement adapté au traitement d’images.
 
----
+## Architecture générale :
 
-# **6. Entraînement du Modèle**
+Couches de convolution : extraction des caractéristiques visuelles (formes, contours, textures).
 
-Le modèle est entraîné en utilisant :
+Couches de MaxPooling : réduction de la dimension spatiale.
 
-* **BinaryCrossentropy (perte binaire)**
-* **Adam Optimizer**
-* **Batch size = 32**
-* **Epochs = 10** (ou selon le code)
+Couche Flatten : transformation des cartes de caractéristiques en vecteur.
 
-L’entraînement permet au modèle d’apprendre les caractéristiques visuelles qui distinguent les images saines des images tumorales.
+Couches Dense : classification finale.
 
----
+Fonction d’activation Sigmoid : sortie binaire.
 
-# **7. Résultats et Évaluation**
+## Justification du choix du CNN :
 
-Les métriques typiques obtenues sont :
+Excellente performance en vision par ordinateur.
 
-* **Accuracy (taux de précision)**
-* **Loss (fonction de perte)**
+Capacité d’apprentissage automatique des caractéristiques.
 
-Même si les chiffres exacts ne sont pas affichés dans ton extrait python, les CNN atteignent généralement :
+Robustesse face aux variations d’images.
 
-| Métrique | Valeur approximative                  |
-| -------- | ------------------------------------- |
-| Accuracy | 90 % à 98 %                           |
-| Loss     | Faible (indique un bon apprentissage) |
+## 7. Entraînement du modèle
 
-Interprétation :
+Le modèle est entraîné avec :
 
-* Le modèle parvient à distinguer correctement les deux classes.
-* Les images contenant des tumeurs sont bien reconnues grâce aux filtres convolutionnels.
-* Les images normales sont aussi correctement identifiées, ce qui prouve la bonne généralisation du modèle.
+Binary Crossentropy comme fonction de perte.
 
----
+Adam Optimizer pour l’optimisation.
 
-# **8. Conclusion**
+Taille de batch : 32.
 
-Le projet montre qu’il est possible de :
+Nombre d’époques : défini selon le code.
 
-* lire et prétraiter automatiquement des images IRM,
-* créer un modèle CNN capable d’identifier la présence ou l’absence de tumeur,
-* obtenir une précision élevée grâce à l’apprentissage profond.
+L’entraînement permet au modèle de distinguer progressivement les images tumorales des images normales.
 
-Le modèle peut servir comme outil d’aide au diagnostic, en complément du travail des médecins.
+## 8. Interprétation du code et des graphes
+## 8.1 Graphe de la précision (Accuracy)
 
----
+Ce graphe illustre l’évolution de la précision sur les ensembles d’entraînement et de validation.
 
-# **9. Pistes d’Amélioration**
+Objectif : vérifier la capacité du modèle à apprendre correctement.
 
-* Utiliser un modèle pré-entraîné (Transfer Learning) comme VGG16 ou ResNet
-* Augmenter le dataset (Data Augmentation)
-* Ajouter la validation croisée
-* Générer une heatmap (Grad-CAM) pour expliquer les zones détectées
-* Optimiser les hyperparamètres (learning rate, batch size, profondeur)
+Interprétation : une précision croissante indique un apprentissage efficace.
 
----
+## 8.2 Graphe de la perte (Loss)
 
+Il représente l’évolution de l’erreur du modèle au fil des époques.
+
+Pourquoi ce graphe : détecter le sous-apprentissage ou le sur-apprentissage.
+
+Interprétation : une perte décroissante indique une amélioration du modèle.
+
+## 8.3 Matrice de confusion
+
+La matrice de confusion compare les prédictions aux valeurs réelles.
+
+Objectif : analyser les erreurs de classification.
+
+Intérêt : identifier les faux positifs et faux négatifs.
+
+ ## 9. Matrice de corrélation
+
+La matrice de corrélation permet d’étudier les relations entre différentes variables ou caractéristiques extraites.
+
+Elle aide à comprendre les dépendances entre certaines caractéristiques.
+
+Une forte corrélation indique une relation importante entre deux variables.
+
+## 10. Lien entre le projet et le Machine Learning
+
+Ce projet illustre une application concrète du Machine Learning supervisé et du Deep Learning :
+
+Utilisation de données étiquetées.
+
+Apprentissage automatique à partir des données.
+
+Amélioration des performances grâce à l’entraînement.
+
+Le Machine Learning permet ainsi de transformer des images IRM brutes en informations exploitables pour l’aide au diagnostic médical.
+
+## 11. Résultats et interprétation globale
+
+Les résultats montrent que le modèle est capable de distinguer efficacement les images avec et sans tumeur, avec une précision généralement élevée. Cela confirme la pertinence de l’approche par apprentissage profond pour ce type de problématique médicale.
+
+## 12. Limites du travail
+
+Malgré les résultats satisfaisants, certaines limites subsistent :
+
+Taille limitée du dataset.
+
+Risque de sur-apprentissage.
+
+Difficulté d’interprétation complète des décisions du modèle.
+
+Généralisation limitée à d’autres bases ou appareils IRM.
+
+## 13. Recommandations et pistes d’amélioration
+
+Plusieurs améliorations peuvent être envisagées :
+
+Utilisation du Transfer Learning (VGG, ResNet, EfficientNet).
+
+Augmentation des données (Data Augmentation).
+
+Optimisation des hyperparamètres.
+
+Intégration de techniques d’explicabilité (Grad-CAM).
+
+Validation sur des données cliniques réelles.
+
+## 14. Conclusion générale
+
+Ce travail démontre que l’apprentissage profond constitue une solution efficace pour la détection automatique des tumeurs cérébrales à partir d’images IRM. Le système développé ne remplace pas le radiologue, mais agit comme un outil d’aide à la décision, contribuant à améliorer la rapidité, la fiabilité et la précision du diagnostic médical.
