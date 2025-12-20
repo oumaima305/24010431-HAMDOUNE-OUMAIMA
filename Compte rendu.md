@@ -50,11 +50,8 @@ Yes (Brain Tumor) : images contenant une tumeur.
 No (No Brain Tumor) : images saines.
 
 ## Caractéristiques du dataset :
-Élément	Description
-Type de données	Images IRM (.jpg / .png)
-Nombre de classes	2
-Nature	Données supervisées
-Complexité	Variations de formes, contrastes et qualité
+
+<img width="738" height="689" alt="image" src="https://github.com/user-attachments/assets/5ccc47f5-b199-4f9b-8343-5ae7b0fc93ec" /> 
 
 Les données proviennent d’une plateforme scientifique ouverte (telle que Kaggle), où elles sont mises à disposition par des chercheurs et institutions médicales à des fins pédagogiques et de recherche, après anonymisation.
 
