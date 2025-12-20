@@ -80,11 +80,17 @@ Encodage des classes (1 : tumeur, 0 : absence de tumeur).
 
 20 % pour le test.
 
-## Modélisation : conception d’un réseau neuronal convolutionnel (CNN).
+## Modélisation : 
 
-## Entraînement : optimisation des paramètres du modèle.
+conception d’un réseau neuronal convolutionnel (CNN).
 
-## Évaluation : analyse des performances à l’aide de métriques et de graphes.
+## Entraînement :
+
+optimisation des paramètres du modèle.
+
+## Évaluation :
+
+analyse des performances à l’aide de métriques et de graphes.
 
 ## 6. Modèle utilisé : Réseau de neurones convolutif (CNN)
 
