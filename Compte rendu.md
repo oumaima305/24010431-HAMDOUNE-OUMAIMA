@@ -51,7 +51,7 @@ No (No Brain Tumor) : images saines.
 
 ## Caractéristiques du dataset :
 
-<img width="738" height="689" alt="image" src="![Uploading image.png…]()" /> 
+
 
 Les données proviennent d’une plateforme scientifique ouverte (telle que Kaggle), où elles sont mises à disposition par des chercheurs et institutions médicales à des fins pédagogiques et de recherche, après anonymisation.
 
