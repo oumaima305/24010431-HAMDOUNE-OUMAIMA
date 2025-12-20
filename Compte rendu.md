@@ -51,7 +51,7 @@ No (No Brain Tumor) : images saines.
 
 ## Caractéristiques du dataset :
 
-
+https://github.com/oumaima305/24010431-HAMDOUNE-OUMAIMA/blob/main/Capture%20%C3%A9.PNG?raw=true
 
 Les données proviennent d’une plateforme scientifique ouverte (telle que Kaggle), où elles sont mises à disposition par des chercheurs et institutions médicales à des fins pédagogiques et de recherche, après anonymisation.
 
