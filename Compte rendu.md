@@ -5,6 +5,30 @@
 
 ## Détection automatique des tumeurs cérébrales par apprentissage profond
 ## ## Développement d'un système de classification automatique d'images IRM pour la détection de tumeurs cérébrales par apprentissage profond
+
+## **Sommaire**
+
+1. **Contexte général et introduction**
+2. **Problématique**
+3. **Objectifs du projet**
+   3.1 Objectif principal
+   3.2 Objectifs spécifiques
+4. **Présentation et source de la base de données**
+5. **Méthodologie de travail**
+6. **Modèle utilisé : Réseau de neurones convolutif (CNN)**
+7. **Entraînement du modèle**
+8. **Interprétation du code et des graphes**
+   8.1 Graphe de la précision (Accuracy)
+   8.2 Graphe de la perte (Loss)
+   8.3 Matrice de confusion
+9. **Matrice de corrélation**
+10. **Lien entre le projet et le Machine Learning**
+11. **Résultats et interprétation globale**
+12. **Limites du travail**
+13. **Recommandations et pistes d’amélioration**
+14. **Conclusion générale**
+
+
 ## 1. Contexte général et introduction
 
 La détection des tumeurs cérébrales constitue une étape cruciale dans le diagnostic médical. Elle repose traditionnellement sur l’analyse manuelle des images IRM par des radiologues. Bien que cette méthode soit fiable, elle présente plusieurs limites liées à l’intervention humaine. Avec l’évolution du Machine Learning et plus particulièrement du Deep Learning, il devient possible de développer des systèmes intelligents capables d’analyser automatiquement ces images afin d’assister les professionnels de santé.
