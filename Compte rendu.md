@@ -11,22 +11,27 @@
 1. **Contexte général et introduction**
 2. **Problématique**
 3. **Objectifs du projet**
+
    3.1 Objectif principal
+
    3.2 Objectifs spécifiques
-4. **Présentation et source de la base de données**
-5. **Méthodologie de travail**
-6. **Modèle utilisé : Réseau de neurones convolutif (CNN)**
-7. **Entraînement du modèle**
-8. **Interprétation du code et des graphes**
+5. **Présentation et source de la base de données**
+6. **Méthodologie de travail**
+7. **Modèle utilisé : Réseau de neurones convolutif (CNN)**
+8. **Entraînement du modèle**
+9. **Interprétation du code et des graphes**
+
    8.1 Graphe de la précision (Accuracy)
+
    8.2 Graphe de la perte (Loss)
+
    8.3 Matrice de confusion
-9. **Matrice de corrélation**
-10. **Lien entre le projet et le Machine Learning**
-11. **Résultats et interprétation globale**
-12. **Limites du travail**
-13. **Recommandations et pistes d’amélioration**
-14. **Conclusion générale**
+11. **Matrice de corrélation**
+12. **Lien entre le projet et le Machine Learning**
+13. **Résultats et interprétation globale**
+14. **Limites du travail**
+15. **Recommandations et pistes d’amélioration**
+16. **Conclusion générale**
 
 
 ## 1. Contexte général et introduction
