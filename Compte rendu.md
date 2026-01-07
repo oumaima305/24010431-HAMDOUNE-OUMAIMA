@@ -16,10 +16,10 @@
 
    3.2 Objectifs spécifiques
 5. **Présentation et source de la base de données**
-6. **Méthodologie de travail**
-7. **Modèle utilisé : Réseau de neurones convolutif (CNN)**
-8. **Entraînement du modèle**
-9. **Interprétation du code et des graphes**
+7. **Méthodologie de travail**
+8. **Modèle utilisé : Réseau de neurones convolutif (CNN)**
+9. **Entraînement du modèle**
+10. **Interprétation du code et des graphes**
 
    8.1 Graphe de la précision (Accuracy)
 
